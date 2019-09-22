@@ -20,11 +20,11 @@ The message appearing should end with “Successfully installed gym-TicTacToe”
 
 
 #### 2) Import the Environment
-Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
+- Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
 
 add to the code:
-`from tictactoe_env import tictactoeEnv`
-`env = tictactoeEnv()`
+- `from tictactoe_env import tictactoeEnv`
+- `env = tictactoeEnv()`
 
 
 Run `mainTicTacToe.py`
@@ -41,15 +41,13 @@ This repository contains four main files:
 
 
 
-
-
 ## The TicTacToe Environment
 TicTacToe is a board game, where two players competing have to goal, to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
 <!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 -->
-<img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="250"/>
+<img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
 
 #### Methods
 - reset: rest the board game
@@ -60,6 +58,7 @@ TicTacToe is a board game, where two players competing have to goal, to place th
 #### Action
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
 
+| --- | --- | --- |
 | 0 | 1 | 2 |
 | 3 | 4 | 5 |
 | 6 | 7 | 8 |
@@ -95,7 +94,7 @@ The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temp
 <!---
 ![Q-Learning](/Sutton_Barto.png)
 -->
-<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="800"/>
+<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="750"/>
 
 
 Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
