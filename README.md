@@ -4,7 +4,7 @@ This repository contains an implementation of a TicTacToe Environment based on O
 ## Getting Started
 clone repo and install the environment:
 ````
-git clone https://github.com/MauroLuzzatto/TicTacToeEnvironment
+git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Enviornment.git
 ````
 
 There are two options to setup the environment:
@@ -16,18 +16,19 @@ open the command line:
 -	`cd C:\Users\[name]\Anaconda3\Lib\site-packages\gymTicTacToe` 
 -	`pip install -e . `
 
-The message appearing should end with “Successfully installed gym-TicTacToe”
+The message appearing should end with *Successfully installed gym-TicTacToe*
 
- [This is a relative link to a nested file](gymTicTacToe/README.md)
+ [Link to further information on how to register an gym environment](gymTicTacToe/README.md)
 
 
 #### 2) Import the Environment
 - Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
 
-add to the code:
-- `from tictactoe_env import tictactoeEnv`
-- `env = tictactoeEnv()`
-
+add to the main file:
+```python
+from tictactoe_env import tictactoeEnv
+env = tictactoeEnv()
+```
 
 Run `mainTicTacToe.py`
 
