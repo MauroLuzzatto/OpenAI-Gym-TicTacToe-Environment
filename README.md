@@ -65,6 +65,13 @@ The action space contains integers from 0 to 9, each representing a board field.
 | 6 | 7 | 8 |
 
 
+| Left-aligned | Center-aligned | Right-aligned |
+| :---:         |     :---:      |          :---: |
+| 0   | git status     | git status    |
+| 3     | git diff       | git diff      |
+| 6     | git diff       | git diff      |
+
+
 #### States
 State space:
 -    On a 3x3 board are theoretically 3**n**2 = 3**3**2 = 19’683 stone combinations of two different colors (and no color) possible (n = the size of the square filed)
