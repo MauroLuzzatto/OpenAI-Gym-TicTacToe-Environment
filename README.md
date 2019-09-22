@@ -49,16 +49,17 @@ TicTacToe is a board game, where two players competing have to goal, to place th
 -->
 <img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
 
-#### Methods
+#### Environment Methods
 - reset: rest the board game
 - step: add a stone of a color of a player in the board
 - decode_action: convert action from 0 to 9 into column and row values
 - render: render the stones on the board game
 
+
+### Reinforcement Learning Environment Properties
+
 #### Action
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
-
-
 
 
 |  |  |  |
