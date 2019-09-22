@@ -2,27 +2,29 @@
 This repository contains an implementation of a TicTacToe Environment based on OpenAI Gym and a Q-Learning algorithm that learns to play TicTacToe through self-play.
 
 ## Getting Started
-clone repo and install the environment:
+#### 1) Clone the repo
 ````
 git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Enviornment.git
 ````
 
-There are two options to setup the environment:
+There are two options to install the gymTicTacToe environment:
 
-#### 1) Register the Environment
+#### 2.1) Register the Environment
 -	copy the folder `gymTicTacToe` to `C:\Users\[name]\Anaconda3\Lib\site-packages\`
 
 open the command line:
--	`cd C:\Users\[name]\Anaconda3\Lib\site-packages\gymTicTacToe` 
--	`pip install -e . `
+``` 
+cd C:\Users\[name]\Anaconda3\Lib\site-packages\gymTicTacToe
+pip install -e . 
+```
 
-The message appearing should end with *Successfully installed gym-TicTacToe*
+The message appearing should end with *"Successfully installed gym-TicTacToe"*
 
  [Link to further information on how to register an gym environment](gymTicTacToe/README.md)
 
 
-#### 2) Import the Environment
-- Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
+#### 2.2) Import the Environment
+Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
 
 add to the main file:
 ```python
@@ -30,13 +32,13 @@ from tictactoe_env import tictactoeEnv
 env = tictactoeEnv()
 ```
 
+#### 3) Run
+
 Run `mainTicTacToe.py`
 
-
+---
 
 ## Repository Overview
-
-This repository contains four main files:
 - **\gymTicTacToe**: folder containing the TicTacToe environment and the setup to register the environment
 - **QAgent.py**: Implementation of a Q-Learning Algorithm
 - **mainTicTacToe.py**: Training loop for the agent to learn to play TicTacToe through self-play
@@ -48,14 +50,17 @@ This repository contains four main files:
 <img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
 
 
-TicTacToe is a board game, where two players competing have to goal, to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
+TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
 <!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 -->
 
-#### Environment Methods
-- reset: rest the board game
+### TicTacToe Environment Methods
+
+The environment contains these four main methods:
+
+- reset: reset the board game
 - step: add a stone of a color of a player in the board
 - decode_action: convert action from 0 to 9 into column and row values
 - render: render the stones on the board game
@@ -76,9 +81,10 @@ The action space contains integers from 0 to 9, each representing a board field.
 
 #### States
 State space:
--    On a 3x3 board are theoretically 3**n**2 = 3**3**2 = 19’683 stone combinations of two different colors (and no color) possible (n = the size of the square filed)
+-    On a 3x3 board are theoretically 3^n^2 = 3^3^2 = 19’683 stone combinations of two different colors (and no color) possible (n = the size of the square filed)
 -    However, not all combinations are legal (e.g. you can have a board full of stones from one color)
 -    The state space can therefore be reduced to 8’953 states
+
 State representation:
 -    The state is represented as a 3x3 numpy array representing the 9 fields of the board
 -    Dependent on the moves, the array will get the value
@@ -88,14 +94,13 @@ State representation:
 
 #### Rewards
 There are three different types of rewards in this environment:
--    Large reward (env.large = 10)  when player wins (= +10)
--    Small negative reward (env.small = -1) for every move played ( = -1)
+-    Large reward (env.large = 10) when the player wins (= +10)
+-    Small negative reward (env.small = -1) for every move played (= -1)
 
 #### Done
 The game finishes:
 -    When one of the players has three stones either horizontally, vertically or diagonally
 -    When the board is full of stones, but there is no winner
-
 
 ---
 
@@ -106,10 +111,9 @@ The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temp
 ![Q-Learning](/Sutton_Barto.png)
 -->
 <img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="750"/>
+[Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
 
-
-Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
-
+#### Variable Explanation
 - Q: action-value function
 - s: state
 - s': next state
@@ -131,7 +135,7 @@ Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html
 
 ---
 
-## Training Loop
+## Main Training Loop
 In the training loop the agent learns to play TicTacToe through self-play. After each step taken the Q-table of the agent is updated based on the received reward.
 
 #### Training Settings

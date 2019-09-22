@@ -1,10 +1,6 @@
 # Register OpenAI Gym Environment
 
-Register a new gym environment, based on the following link:
-
-https://github.com/openai/gym/tree/master/gym/envs#how-to-create-new-environments-for-gym
-
----
+Register a new gym environment, based on the following [link](https://github.com/openai/gym/tree/master/gym/envs#how-to-create-new-environments-for-gym)
 
 ## Installation
 
@@ -66,5 +62,3 @@ finalize the installation with the following steps:
 - use in the cmd line: `pip install -e .`
 - in the main gym file, where the environment is used add: `import gym_graph`
 - load the environment with `env = gym.make('graph-v0')`
-
----
