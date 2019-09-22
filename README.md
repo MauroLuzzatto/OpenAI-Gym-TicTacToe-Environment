@@ -42,9 +42,10 @@ This repository contains four main files:
 ## Q-Learning Algorithm
 The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temporal-Difference control algorithm:
 
+<!---
 ![Q-Learning](/Sutton_Barto.png)
-
-<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="250"/>
+-->
+<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="400"/>
 
 
 Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
@@ -89,8 +90,9 @@ In the training loop the agent learns to play TicTacToe through self-play. After
 ## The TicTacToe Environment
 TicTacToe is a board game, where two players competing have to goal, to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
+<!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
-
+-->
 <img src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="250"/>
 
 ### Methods
