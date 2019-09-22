@@ -20,7 +20,7 @@ pip install -e .
 
 The message appearing should end with *"Successfully installed gym-TicTacToe"*
 
- [Link to further information on how to register an gym environment](gymTicTacToe/README.md)
+ [Further information on how to register an gym environment](gymTicTacToe/README.md)
 
 
 #### 2.2) Import the Environment
