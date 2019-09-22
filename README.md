@@ -65,7 +65,7 @@ The action space contains integers from 0 to 9, each representing a board field.
 | 6 | 7 | 8 |
 
 
-| Left-aligned | Center-aligned | Right-aligned |
+| Left-aligned |  | Right-aligned |
 | :---:         |     :---:      |          :---: |
 | 0   | git status     | git status    |
 | 3     | git diff       | git diff      |
