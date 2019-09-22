@@ -58,6 +58,7 @@ TicTacToe is a board game, where two players competing have to goal, to place th
 #### Action
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
 
+| -| -|
 | --- | --- | --- |
 | 0 | 1 | 2 |
 | 3 | 4 | 5 |
