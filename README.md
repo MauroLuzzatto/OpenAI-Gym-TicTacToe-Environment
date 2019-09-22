@@ -60,10 +60,10 @@ TicTacToe is a board game, where two players compete to place three stones of th
 
 The environment contains these four main methods:
 
-- reset: reset the board game
-- step: add a stone of a color of a player in the board
-- decode_action: convert action from 0 to 9 into column and row values
-- render: render the stones on the board game
+- **reset**: reset the board game
+- **step**: add a stone of a color of a player in the board
+- **decode_action**: convert action from 0 to 9 into column and row values
+- **render**: render the stones on the board game
 
 
 ### Reinforcement Learning Environment Properties
@@ -144,12 +144,12 @@ In the training loop the agent learns to play TicTacToe through self-play. After
 
 
 #### Training Helper Functions
-- create_state_dictionary: create state encoding dictionary
-- reshape_state: reshape the state array into a tuple
-- create_plot: plot the training progress reward versus episodes for both player
-- save_qtable: save the Q-table
-- load_qtable: load the Q-table
-- test_self_play_learning: test the trained agent with playing against it
+- **create_state_dictionary**: create state encoding dictionary
+- **reshape_state**: reshape the state array into a tuple
+- **create_plot**: plot the training progress reward versus episodes for both player
+- **save_qtable**: save the Q-table
+- **load_qtable**: load the Q-table
+- **test_self_play_learning**: test the trained agent with playing against it
 
 
 ## References
