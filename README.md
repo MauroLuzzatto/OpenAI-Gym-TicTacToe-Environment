@@ -60,7 +60,7 @@ TicTacToe is a board game, where two players competing have to goal, to place th
 
 ### Reinforcement Learning Environment Properties
 
-#### Action
+#### Actions
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
 
 
@@ -92,8 +92,6 @@ There are three different types of rewards in this environment:
 The game finishes:
 -    When one of the players has three stones either horizontally, vertically or diagonally
 -    When the board is full of stones, but there is no winner
-
-![TicTacToe Board](/ 2000px-Tic_tac_toe.svg.png)
 
 ## Q-Learning Algorithm
 The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temporal-Difference control algorithm:

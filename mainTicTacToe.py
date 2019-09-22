@@ -14,11 +14,7 @@ that learns to play TicTacToe through self-play
 
 import numpy as np
 import gym
-#from gym.envs.registration import register
-#from gym import error, spaces, utils
 import time
-#from tictactoe_env import tictactoeEnv
-#from gym import envs
 
 import gym_TicTacToe
 from Qagent import Qagent
@@ -29,10 +25,12 @@ from helperFunctions import create_state_dictionary, reshape_state, \
 state_dict = create_state_dictionary()
 
 
-# has to be cpied and installed at the package level
-
 # init the enviornment
 env = gym.make('TTT-v4')
+
+
+# second option:
+#from tictactoe_env import tictactoeEnv
 #env = tictactoeEnv()
 
 
@@ -59,6 +57,7 @@ exploration_parameters = {
 episodes = 10**6 * 2
 max_steps = 9
 
+# name of the qtable when saved
 name = 'qtable'
 load = True
 save = True
@@ -73,10 +72,16 @@ player2_reward_array = np.zeros(episodes)
 qagent = Qagent(env, state_size, action_size, learning_parameters, exploration_parameters)
 
 if load:
-    qagent.qtable = load_qtable(name)
+    try:
+        qagent.qtable = load_qtable(name)
+        print('{}.npy loaded!'.format(name))
+
+    except: 
+        print('qtable could not be loaded!')
+        
 
 
-# Track the actions taken over time while playing,  9*8*7*6*5*4*3*2*1
+# TODO: Track the actions taken over time while playing,  9*8*7*6*5*4*3*2*1
 
 # start the training
 start_time = time.time()
@@ -149,6 +154,6 @@ if save:
     save_qtable(qagent.qtable, name)
     qtable = qagent.qtable
     
-
+# test the algorithm with playing against it
 if test:            
-    test_self_play_learning(test_self_play_learning)
+    test_self_play_learning(env, qtable, max_steps, num_test_games, state_dict)

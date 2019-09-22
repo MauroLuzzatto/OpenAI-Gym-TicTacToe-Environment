@@ -5,7 +5,6 @@ Created on Thu Sep 19 21:50:10 2019
 @author: mauro
 """
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product
@@ -38,6 +37,8 @@ def reshape_state(state):
     transfrom the 3x3 board numpy array into a flattend tuple
     Args:
         state (array): 3x3 numpy array, representing the board postions = state
+    Returns:
+        state (tuple): the flattened numy array converted into a tuple
     """
     return tuple(state.reshape(1, -1)[0])
 
@@ -59,13 +60,19 @@ def create_plot(player1_reward_array, player2_reward_array):
 
 
 def save_qtable(qtable, name = 'qtable'):
+    """
+    save the qtable
+    """
     np.save('{}.npy'.format(name), qtable)
     print('{}.npy saved!'.format(name))
 
 
 def load_qtable(name = 'qtable'):
-    print('{}.npy loaded!'.format(name))
+    """
+    load the qtable
+    """    
     return np.load('{}.npy'.format(name))
+
 
 def test_self_play_learning(env, qtable, max_steps, num_test_games, state_dict):
     """
@@ -73,8 +80,13 @@ def test_self_play_learning(env, qtable, max_steps, num_test_games, state_dict):
     Args:
         env (class): environment class
         qtable (array): numpy array containing the qtable respect. the state-action values
+        max_steps (int): max steps to take in one episode
         num_test_games (int): number of times to play against the trained agent
+        state_dict (dict): encoding of the state array
     """
+
+    player1 = 1
+    player2 = 2
 
     for _ in range(num_test_games):  
         state = env.reset()
