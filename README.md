@@ -7,7 +7,9 @@ clone repo and install the environment:
 git clone https://github.com/MauroLuzzatto/TicTacToeEnvironment
 ````
 
-### 1) Register the Environment
+There are two options to setup the environment:
+
+#### 1) Register the Environment
 -	copy the folder `gymTicTacToe` to `C:\Users\[name]\Anaconda3\Lib\site-packages\`
 
 open the command line:
@@ -17,7 +19,7 @@ open the command line:
 The message appearing should end with “Successfully installed gym-TicTacToe”
 
 
-### 2) Import the Environment
+#### 2) Import the Environment
 Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
 
 add to the code:
@@ -40,7 +42,7 @@ This repository contains four main files:
 ## Q-Learning Algorithm
 The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temporal-Difference control algorithm:
 
-![Q-Learning](/Sutton_Barto.png)
+![Q-Learning](/Sutton_Barto.png){:height="36px" width="36px"}.
 Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
 
 - Q: action-value function
@@ -51,11 +53,11 @@ Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html
 - alpha: learning rate
 - gamma: discount factor
 
-### Learning Parameters
+#### Learning Parameters
 -learning_rate = 1.0  
 -gamma = 0.9
 
-### Exploration-Exploitation Parameters
+#### Exploration-Exploitation Parameters
 -epsilon = 1.
 -max_epsilon = 1.
 -'min_epsilon = 0.0
@@ -65,7 +67,7 @@ Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html
 ## Training Loop
 In the training loop the agent learns to play TicTacToe through self-play. After each step taken the Q-table of the agent is updated based on the received reward.
 
-### Training Settings
+#### Training Settings
 - episodes: number of games played by the players
 - max_steps: number of maximal steps per game
 
@@ -82,8 +84,6 @@ In the training loop the agent learns to play TicTacToe through self-play. After
 
 ## The TicTacToe Environment
 TicTacToe is a board game, where two players competing have to goal, to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
-
-![TicTacToe Environment](/2000px-Tic_tac_toe.png)
 
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 
