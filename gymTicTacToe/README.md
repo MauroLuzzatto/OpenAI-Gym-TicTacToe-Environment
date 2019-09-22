@@ -1,6 +1,6 @@
-# OpenAI Gym: Graph Environment
+# Register OpenAI Gym Environment
 
-Adding a new gym environment, based on the following link:
+Register a new gym environment, based on the following link:
 
 https://github.com/openai/gym/tree/master/gym/envs#how-to-create-new-environments-for-gym
 
@@ -68,9 +68,3 @@ finalize the installation with the following steps:
 - load the environment with `env = gym.make('graph-v0')`
 
 ---
-
-# Environments in this repository
-
-1) the TicTacToe environment
-
-

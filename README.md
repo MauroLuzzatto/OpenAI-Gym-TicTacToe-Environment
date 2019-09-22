@@ -18,6 +18,8 @@ open the command line:
 
 The message appearing should end with “Successfully installed gym-TicTacToe”
 
+ [This is a relative link to a nested file](gymTicTacToe/README.md)
+
 
 #### 2) Import the Environment
 - Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
@@ -39,7 +41,7 @@ This repository contains four main files:
 - **mainTicTacToe.py**: Training loop for the agent to learn to play TicTacToe through self-play
 - **helperFunctions.py**: helper function to encode the game state, to save and load the Q-table and test the trained agent
 
-
+---
 
 ## The TicTacToe Environment
 <img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
@@ -93,6 +95,9 @@ The game finishes:
 -    When one of the players has three stones either horizontally, vertically or diagonally
 -    When the board is full of stones, but there is no winner
 
+
+---
+
 ## Q-Learning Algorithm
 The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temporal-Difference control algorithm:
 
@@ -122,6 +127,8 @@ Q-Learning Algorithm: [Source](http://incompleteideas.net/book/the-book-2nd.html
 - min_epsilon = 0.0
 - decay_rate = 0.000001
  
+
+---
 
 ## Training Loop
 In the training loop the agent learns to play TicTacToe through self-play. After each step taken the Q-table of the agent is updated based on the received reward.
