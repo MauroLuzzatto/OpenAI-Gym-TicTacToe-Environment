@@ -42,12 +42,14 @@ This repository contains four main files:
 
 
 ## The TicTacToe Environment
+<img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
+
+
 TicTacToe is a board game, where two players competing have to goal, to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
 <!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 -->
-<img align="right" src="/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
 
 #### Environment Methods
 - reset: rest the board game
