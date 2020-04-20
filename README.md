@@ -1,5 +1,5 @@
 # OpenAI Gym – TicTacToe Enviornment and Training
-This repository contains an implementation of a TicTacToe Environment based on OpenAI Gym and a Q-Learning algorithm that learns to play TicTacToe through self-play.
+This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
 
 ## Getting Started
 #### 1) Clone the repo
@@ -7,10 +7,15 @@ This repository contains an implementation of a TicTacToe Environment based on O
 git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Enviornment.git
 ````
 
+Install module dependencies:
+```
+pip install -r requirements.txt
+```
+
 There are two options to install the gymTicTacToe environment:
 
 #### 2.1) Register the Environment
--	copy the folder `gymTicTacToe` to `C:\Users\[name]\Anaconda3\Lib\site-packages\`
+copy the folder `gymTicTacToe` to `C:\Users\[name]\Anaconda3\Lib\site-packages\`
 
 open the command line:
 ``` 
@@ -58,7 +63,7 @@ TicTacToe is a board game, where two players compete to place three stones of th
 
 ### TicTacToe Environment Methods
 
-The environment contains these four main methods:
+The environment contains the following four main methods:
 
 - **reset**: reset the board game
 - **step**: add a stone of a color of a player in the board
@@ -110,10 +115,10 @@ The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temp
 <!---
 ![Q-Learning](/Sutton_Barto.png)
 -->
-<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="750"/>
+<img src="/Sutton_Barto.png" alt="TicTacToe Environment" width="600"/>
 [Source](http://incompleteideas.net/book/the-book-2nd.html), image taken from **Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
 
-#### Variable Explanation
+#### Legend
 - Q: action-value function
 - s: state
 - s': next state
