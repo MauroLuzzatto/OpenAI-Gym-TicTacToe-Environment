@@ -1,3 +1,5 @@
+![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
+
 # OpenAI Gym – TicTacToe Environment and Training
 
 This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
