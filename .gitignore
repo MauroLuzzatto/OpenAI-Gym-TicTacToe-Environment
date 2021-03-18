@@ -1,4 +1,6 @@
 *.pkl
 *.docx
 *.npy
+makefile
+.vscode
 __pycache__/

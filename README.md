@@ -1,53 +1,51 @@
-# OpenAI Gym – TicTacToe Enviornment and Training
+# OpenAI Gym – TicTacToe Environment and Training
 This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
 
-## Getting Started
-#### 1) Clone the repo
-````
-git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Enviornment.git
-````
-
-Install module dependencies:
+# Getting Started
+## 1) Setup
 ```
+git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Environment.git
+cd OpenAI-Gym-TicTacToe-Environment
 pip install -r requirements.txt
 ```
 
-There are two options to install the gymTicTacToe environment:
+## 2) Register the Environment
 
-#### 2.1) Register the Environment
-copy the folder `gymTicTacToe` to `C:\Users\[name]\Anaconda3\Lib\site-packages\`
-
-open the command line:
+from the command line
 ``` 
-cd C:\Users\[name]\Anaconda3\Lib\site-packages\gymTicTacToe
+cd gym-TicTacToe
 pip install -e . 
 ```
 
-The message appearing should end with *"Successfully installed gym-TicTacToe"*
+the run should end with the following message
+```
+"Successfully installed gym-TicTacToe"
+```
+ [Further information on how to register an gym environment](gym-TicTacToe/README.md)
 
- [Further information on how to register an gym environment](gymTicTacToe/README.md)
 
-
-#### 2.2) Import the Environment
+<!-- #### 2.2) Import the Environment
 Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
 
 add to the main file:
 ```python
 from tictactoe_env import tictactoeEnv
 env = tictactoeEnv()
+``` -->
+
+## 3) Run the code
+
 ```
+cd example
+```
+run `mainTicTacToe.py`
 
-#### 3) Run
 
-Run `mainTicTacToe.py`
-
----
-
-## Repository Overview
-- **\gymTicTacToe**: folder containing the TicTacToe environment and the setup to register the environment
+# Repository Overview
+- **gym-TicTacToe**: folder containing the TicTacToe environment and the setup to register the environment
 - **QAgent.py**: Implementation of a Q-Learning Algorithm
 - **mainTicTacToe.py**: Training loop for the agent to learn to play TicTacToe through self-play
-- **helperFunctions.py**: helper function to encode the game state, to save and load the Q-table and test the trained agent
+- **utils.py**: helper function to encode the game state, to save and load the Q-table and test the trained agent
 
 ---
 
