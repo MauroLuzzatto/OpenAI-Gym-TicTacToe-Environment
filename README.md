@@ -1,4 +1,5 @@
 # OpenAI Gym – TicTacToe Environment and Training
+<img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
 This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
 
 # Getting Started
