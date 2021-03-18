@@ -35,7 +35,7 @@ env = tictactoeEnv()
 ``` -->
 
 ## 3) Run the code
-
+Train the Q-Learning agent to play TicTacToe
 ```
 cd example
 ```
