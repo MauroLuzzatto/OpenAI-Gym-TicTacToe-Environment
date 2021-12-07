@@ -74,7 +74,6 @@ if load:
     try:
         qagent.qtable = load_qtable(name)
         print("{}.npy loaded!".format(name))
-
     except:
         print("qtable could not be loaded!")
 
@@ -121,10 +120,9 @@ for episode_i in range(episodes):
 
             # player 2
             action = qagent.get_action(state, action_space)
-
             # remove action from the action space
             action_space = action_space[action_space != action]
-
+            
             new_state, reward, done, _ = env.step(action, player2)
             new_state = state_dict[reshape_state(new_state)]
 
