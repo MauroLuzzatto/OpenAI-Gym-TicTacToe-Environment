@@ -113,35 +113,7 @@ The game finishes:
 -    When the board is full of stones, but there is no winner
 
 
-# Q-Learning Algorithm
-The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temporal-Difference control algorithm:
 
-<!---
-![Q-Learning](/Sutton_Barto.png)
--->
-<img src="/images/Sutton_Barto.png" alt="TicTacToe Environment" width="600"/>
-
-[Source](http://incompleteideas.net/book/the-book-2nd.html): **Image taken from Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: An Introduction, Second edition, 2014/2015, page 158**
-
-## Legend
-- Q: action-value function
-- s: state
-- s': next state
-- a: action
-- r: reward
-- alpha: learning rate
-- gamma: discount factor
-
-## Learning Parameters
-- learning_rate = 1.0  
-- gamma = 0.9
-
-## Exploration-Exploitation Parameters
-- epsilon = 1.
-- max_epsilon = 1.
-- min_epsilon = 0.0
-- decay_rate = 0.000001
- 
 
 # References
 - [OpenAI Gym](https://gym.openai.com/): Gym is a toolkit for developing and comparing reinforcement learning algorithms from OpenAI
