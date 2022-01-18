@@ -1,9 +1,9 @@
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 
 
-<img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="250"/>
+<img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="270"/>
 
-# OpenAI Gym – TicTacToe Environment and Training
+# OpenAI Gym – TicTacToe Environment
 
 
 
@@ -61,14 +61,14 @@ run `mainTicTacToe.py`
 
 --- -->
 
-## The gym-TicTacToe Environment
+## TicTacToe Environment
 
 
 <!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 -->
 
-### TicTacToe Environment Methods
+###  Methods
 
 The environment contains the following four main methods:
 
@@ -78,9 +78,7 @@ The environment contains the following four main methods:
 - **render**: render the stones on the board game
 
 
-### Environment Properties
-
-#### Actions
+### Actions
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
 
 
@@ -91,7 +89,7 @@ The action space contains integers from 0 to 9, each representing a board field.
 | 6  | 7  | 8  |
 
 
-#### States
+### States
 State space:
 -    On a 3x3 board are theoretically 3^n^2 = 3^3^2 = 19’683 stone combinations of two different colors (and no color) possible (n = the size of the square filed)
 -    However, not all combinations are legal (e.g. you can have a board full of stones from one color)
@@ -104,12 +102,12 @@ State representation:
     - 1 = stone of player 1
     - 2 = stone of player 2
 
-#### Rewards
+### Rewards
 There are three different types of rewards in this environment:
 -    Large reward (env.large = 10) when the player wins (= +10)
 -    Small negative reward (env.small = -1) for every move played (= -1)
 
-#### Done
+### Done
 The game finishes:
 -    When one of the players has three stones either horizontally, vertically or diagonally
 -    When the board is full of stones, but there is no winner
