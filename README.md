@@ -2,17 +2,23 @@
 
 # OpenAI Gym – TicTacToe Environment and Training
 
+<img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
+
 This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
 
-# Getting Started
-## 1) Setup
+
+TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
+
+
+## Getting Started
+### 1) Setup
 ```
 git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Environment.git
 cd OpenAI-Gym-TicTacToe-Environment
 pip install -r requirements.txt
 ```
 
-## 2) Register the Environment
+### 2) Register the Environment
 
 from the command line
 ``` 
@@ -36,7 +42,7 @@ from tictactoe_env import tictactoeEnv
 env = tictactoeEnv()
 ``` -->
 
-## 3) Run the code
+### 3) Run the code
 Train the Q-Learning agent to play TicTacToe
 ```
 cd example
@@ -52,17 +58,14 @@ run `mainTicTacToe.py`
 
 --- -->
 
-# The gym-TicTacToe Environment
-<img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="300"/>
+## The gym-TicTacToe Environment
 
-
-TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
 <!---
 ![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
 -->
 
-## TicTacToe Environment Methods
+### TicTacToe Environment Methods
 
 The environment contains the following four main methods:
 
@@ -72,9 +75,9 @@ The environment contains the following four main methods:
 - **render**: render the stones on the board game
 
 
-## Environment Properties
+### Environment Properties
 
-### Actions
+#### Actions
 The action space contains integers from 0 to 9, each representing a board field. The table below shows the action number and its corresponding board position.
 
 
@@ -85,7 +88,7 @@ The action space contains integers from 0 to 9, each representing a board field.
 | 6  | 7  | 8  |
 
 
-### States
+#### States
 State space:
 -    On a 3x3 board are theoretically 3^n^2 = 3^3^2 = 19’683 stone combinations of two different colors (and no color) possible (n = the size of the square filed)
 -    However, not all combinations are legal (e.g. you can have a board full of stones from one color)
@@ -98,12 +101,12 @@ State representation:
     - 1 = stone of player 1
     - 2 = stone of player 2
 
-### Rewards
+#### Rewards
 There are three different types of rewards in this environment:
 -    Large reward (env.large = 10) when the player wins (= +10)
 -    Small negative reward (env.small = -1) for every move played (= -1)
 
-### Done
+#### Done
 The game finishes:
 -    When one of the players has three stones either horizontally, vertically or diagonally
 -    When the board is full of stones, but there is no winner
@@ -138,24 +141,6 @@ The image below describes the Q-Learning Algorithm, which is an oﬀ-policy Temp
 - min_epsilon = 0.0
 - decay_rate = 0.000001
  
-
-
-# Main Training Loop
-In the training loop the agent learns to play TicTacToe through self-play. After each step taken the Q-table of the agent is updated based on the received reward.
-
-## Training Settings
-- episodes: number of games played by the players
-- max_steps: number of maximal steps per game
-
-
-## Training Helper Functions
-- **create_state_dictionary**: create state encoding dictionary
-- **reshape_state**: reshape the state array into a tuple
-- **create_plot**: plot the training progress reward versus episodes for both player
-- **save_qtable**: save the Q-table
-- **load_qtable**: load the Q-table
-- **test_self_play_learning**: test the trained agent with playing against it
-
 
 # References
 - [OpenAI Gym](https://gym.openai.com/): Gym is a toolkit for developing and comparing reinforcement learning algorithms from OpenAI
