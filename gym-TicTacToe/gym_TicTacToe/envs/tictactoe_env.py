@@ -10,7 +10,7 @@ class tictactoeEnv(gym.Env):
     Implementation of a TicTacToe Environment based on OpenAI Gym standards
     """
 
-    def __init__(self, small:int, large:int) -> None:
+    def __init__(self, small: int, large: int) -> None:
 
         self.n_actions = 9  # for every space on the field
         self.n_states = 8953  # 3**n**2 (n=3) possible combinations, legal states 8953
@@ -26,7 +26,7 @@ class tictactoeEnv(gym.Env):
         self.state = np.zeros((3, 3), dtype=int)
         return self.state.flatten()
 
-    def step(self, action:int, color:int) -> Tuple[np.array, int, bool, dict]:
+    def step(self, action: int, color: int) -> Tuple[np.array, int, bool, dict]:
         """
         step function of the tictactoeEnv
         Args:
@@ -38,17 +38,24 @@ class tictactoeEnv(gym.Env):
           done (boolean): true, if the game is finished
         """
 
-        # check if action is contained in action_sapce
         assert self.action_space.contains(action)
-        done = False
-        # give (negative) reward for every move done
-        reward = self.small
-
+        reward = self.small  # give (negative) reward for every move done
         # postion the token on the field
         (row, col) = self.decode_action(action)
         self.state[row, col] = color
+        done = self.is_winner(color)
+        return self.state, reward, done, {}
 
-        # check if there is a winner
+    def is_winner(self, color: int) -> bool:
+        """check if there is a winner
+
+        Args:
+            color (int): of the player
+
+        Returns:
+            bool: indicating if there is a winner
+        """
+        done = False
         boolean_matrix = self.state == color
         for ii in range(3):
             # check if three equal coins are aligned (horizontal, verical or diagonal)
@@ -67,10 +74,9 @@ class tictactoeEnv(gym.Env):
                 reward += self.large
                 done = True
                 break
+        return done
 
-        return self.state, reward, done, {}
-
-    def decode_action(self, i:int) -> list:
+    def decode_action(self, i: int) -> list:
         """
         decode the action integer into a colum and row value,
         0 = upper left corner, 8 = lower right corner
@@ -82,10 +88,12 @@ class tictactoeEnv(gym.Env):
         assert 0 <= i < 3
         return reversed(out)
 
-    def render(self) -> None:
+    def __str__(self) -> None:
         """
         render the board with '-' no stone,
         for stones with 'O' for player = 0, and 'X' for player = 1
+
+        TODO: make an example
         """
         render_field = np.zeros((3, 3), dtype=str)
         for ii in range(3):
