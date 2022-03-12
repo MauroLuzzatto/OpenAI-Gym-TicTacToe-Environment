@@ -1,7 +1,7 @@
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 
 
-<img align="right" src="/images/tictactoe.png" alt="TicTacToe Environment" width="250"/>
+<img align="right" src="/images/tictactoe.jpg" alt="TicTacToe Environment" width="250"/>
 
 # OpenAI Gym – TicTacToe Environment
 
