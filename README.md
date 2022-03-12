@@ -7,8 +7,9 @@
 
 
 
-This repository contains a TicTacToe-Environment based on the OpenAI Gym module and a Q-Learning algorithm that learns to play TicTacToe through self-play.
+This repository contains a TicTacToe-Environment based on the OpenAI Gym module.
 
+An example on how to use this environment with a Q-Learning algorithm that learns to play TicTacToe through self-play can be found [here](https://github.com/MauroLuzzatto/learn-tictactoe-through-self-play).
 
 TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
@@ -36,14 +37,6 @@ the run should end with the following message
  [Further information on how to register an gym environment](gym-TicTacToe/README.md)
 
 
-<!-- #### 2.2) Import the Environment
-Copy `tictactoe_env.py` from the folder `gymTicTacToe\gym_TicTacToe\envs` to the `TicTacToe` folder
-
-add to the main file:
-```python
-from tictactoe_env import tictactoeEnv
-env = tictactoeEnv()
-``` -->
 
 ### 3) Run the code
 Train the Q-Learning agent to play TicTacToe
@@ -53,20 +46,9 @@ cd example
 run `mainTicTacToe.py`
 
 
-<!-- # Repository Overview
-- **gym-TicTacToe**: folder containing the TicTacToe environment and the setup to register the environment
-- **QAgent.py**: Implementation of a Q-Learning Algorithm
-- **mainTicTacToe.py**: Training loop for the agent to learn to play TicTacToe through self-play
-- **utils.py**: helper function to encode the game state, to save and load the Q-table and test the trained agent
-
---- -->
 
 ## TicTacToe Environment
 
-
-<!---
-![TicTacToe Environment](/thin-1399_playing_tic_tac_toe_game-512.png)
--->
 
 ###  Methods
 
