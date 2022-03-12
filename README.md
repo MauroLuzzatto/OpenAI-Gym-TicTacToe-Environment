@@ -3,6 +3,8 @@
 
 <img align="right" src="/images/thin-1399_playing_tic_tac_toe_game-512.png" alt="TicTacToe Environment" width="250"/>
 
+<img align="right" src="/tictactoe.jpg" alt="TicTacToe Environment" width="250"/>
+
 # OpenAI Gym – TicTacToe Environment
 
 
