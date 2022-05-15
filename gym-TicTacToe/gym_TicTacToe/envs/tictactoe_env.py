@@ -1,5 +1,6 @@
 import gym
 import numpy as np
+from tabulate import tabulate
 
 from typing import Tuple, List
 
@@ -24,13 +25,13 @@ class tictactoeEnv(gym.Env):
         self.observation_space = gym.spaces.Discrete(n_states)
         self.small = small
         self.large = large
+        self.state = np.zeros((3, 3), dtype=int)
 
     def reset(self) -> np.array:
         """
         reset the board game and state
 
-        TODO: return a info dict
-        https://github.com/openai/gym
+        TODO: return a info dict -> https://github.com/openai/gym
         """
         self.state = np.zeros((3, 3), dtype=int)
         return self.state.flatten()
@@ -59,14 +60,14 @@ class tictactoeEnv(gym.Env):
         reward = self.small  # give (negative) reward for every move done
         (row, col) = self.decode_action(action)
         self.state[row, col] = color  # postion the token on the field
-        done = self.is_winner(color)
+        done = self._is_winner(color)
 
         if done:
             reward += self.large
 
         return self.state, reward, done, {}
 
-    def is_winner(self, color: int) -> bool:
+    def _is_winner(self, color: int) -> bool:
         """check if there is a winner
 
         Args:
@@ -122,16 +123,17 @@ class tictactoeEnv(gym.Env):
 
         TODO: make an example
         """
-        render_field = np.zeros((3, 3), dtype=str)
+        board = np.zeros((3, 3), dtype=str)
         for ii in range(3):
             for jj in range(3):
                 if self.state[ii, jj] == 0:
-                    render_field[ii, jj] = "-"
+                    board[ii, jj] = "-"
                 elif self.state[ii, jj] == 1:
-                    render_field[ii, jj] = "X"
+                    board[ii, jj] = "X"
                 elif self.state[ii, jj] == 2:
-                    render_field[ii, jj] = "O"
-        print(render_field)
+                    board[ii, jj] = "O"
+        board = tabulate(board, tablefmt="fancy_grid")
+        return board
 
 
 if __name__ == "__main__":
