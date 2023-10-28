@@ -57,7 +57,7 @@ from gym_graph.envs.graph_env import GraphEnv
 ---
 
 finalize the installation with the following steps:
-- download the repo: `git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Enviornment.git`
+- download the repo: `git clone git@github.com:MauroLuzzatto/OpenAI-Gym-TicTacToe-Environment.git`
 - `cd gym-graph`
 - `pip install -e .`
 - in the main gym file, where the environment is used add: `import gym_graph`
