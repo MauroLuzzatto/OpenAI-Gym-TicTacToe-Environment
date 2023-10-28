@@ -13,6 +13,14 @@ An example on how to use this environment with a Q-Learning algorithm that learn
 
 TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
+##  Environment Specs
+
+
+| Environment Id | Observation Space |Action Space| Reward Range | tStepL | 
+| ------ | ------ |------ | ------ |------ | 
+| TTT-v0 |Box(3,3)|Discrete(9)|(-inf, inf) | 9 | 
+
+
 
 ## Getting Started
 ### 1) Setup
@@ -24,26 +32,32 @@ pip install -r requirements.txt
 
 ### 2) Register the Environment
 
-from the command line
+run the following command in the command line
 ``` 
-cd gym-TicTacToe
-pip install -e . 
+pip install -e gym-TicTacToe/. 
 ```
 
 the run should end with the following message
 ```
 "Successfully installed gym-TicTacToe"
 ```
- [Further information on how to register an gym environment](gym-TicTacToe/README.md)
+Further information on how to register an gym environment can be found  [here](gym-TicTacToe/README.md)
 
 
 
-### 3) Run the code
-Train the Q-Learning agent to play TicTacToe
+### 3) Use the environment and start playing
 ```
-cd example
+import gym_TicTacToe
+import gym
+
+# initialize the tictactoe environment
+env = gym.envs.make("TTT-v0", small=-1, large=10)
+
+# start playing
+color = 1
+action = 0
+new_state, reward, done, _ = env.step((action, color))
 ```
-run `mainTicTacToe.py`
 
 
 
@@ -97,7 +111,7 @@ The game finishes:
 
 
 
-# References
+## References
 - [OpenAI Gym](https://gym.openai.com/): Gym is a toolkit for developing and comparing reinforcement learning algorithms from OpenAI
 - [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
