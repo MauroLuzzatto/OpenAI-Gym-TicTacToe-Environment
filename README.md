@@ -13,7 +13,6 @@ An example on how to use this environment with a Q-Learning algorithm that learn
 
 TicTacToe is a board game, where two players compete to place three stones of their color in parallel (horizontally or vertically) or diagonally to win the game.
 
-##  Environment Specs
 
 
 | Environment Id | Observation Space |Action Space| Reward Range | tStepL | 
@@ -37,7 +36,7 @@ run the following command in the command line
 pip install -e gym-TicTacToe/. 
 ```
 
-the run should end with the following message
+now you should see the following message
 ```
 "Successfully installed gym-TicTacToe"
 ```
