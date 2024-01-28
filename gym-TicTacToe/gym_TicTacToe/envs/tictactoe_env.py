@@ -95,7 +95,8 @@ class TicTacToeEnv(gym.Env):
                 # check rows
                 or np.sum(bool_matrix[ii, :]) == 3
                 # check diagonal
-                or np.sum([bool_matrix[ii, ii]]) == 3
+                or np.sum([bool_matrix[0, 0], bool_matrix[1, 1], bool_matrix[2, 2]])
+                == 3
                 or np.sum([bool_matrix[0, 2], bool_matrix[1, 1], bool_matrix[2, 0]])
                 == 3
             ):
